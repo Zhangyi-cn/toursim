@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="120" height="120" fill="#f0f0f0"/>
+  <rect x="20" y="20" width="80" height="80" fill="#e0e0e0"/>
+  <text x="60" y="65" font-family="Arial" font-size="12" text-anchor="middle" fill="#666">
+    二维码
+  </text>
+</svg> 

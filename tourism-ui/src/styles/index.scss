@@ -1,0 +1,153 @@
+@use './variables.scss' as *;
+@use './reset.scss' as *;
+
+// 导入Element Plus主题
+@import './element.scss';
+
+// 全局样式
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+    'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji';
+  font-size: $font-size-base;
+  color: $text-primary;
+  background-color: $background-color;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#app {
+  height: 100%;
+}
+
+// 容器
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+// 通用卡片样式
+.card {
+  background: #fff;
+  border-radius: $border-radius-base;
+  box-shadow: $box-shadow-base;
+  transition: $transition-base;
+  
+  &:hover {
+    box-shadow: $box-shadow-hover;
+  }
+}
+
+// 页面内容区域
+.page-container {
+  padding: $spacing-lg 0;
+}
+
+// 图片样式
+.image-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: $transition-base;
+}
+
+// 标题样式
+.page-title {
+  font-size: $font-size-xxl;
+  font-weight: bold;
+  margin-bottom: $spacing-lg;
+  color: $text-primary;
+}
+
+.section-title {
+  font-size: $font-size-xl;
+  font-weight: bold;
+  margin-bottom: $spacing-md;
+  color: $text-primary;
+  
+  &::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: $primary-color;
+    margin-top: $spacing-xs;
+  }
+}
+
+// 按钮样式覆盖
+.el-button--primary {
+  background-color: $primary-color;
+  border-color: $primary-color;
+  
+  &:hover, &:focus {
+    background-color: $primary-light;
+    border-color: $primary-light;
+  }
+}
+
+// 文本溢出省略
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ellipsis-2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+// 响应式布局类
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// 间距类
+.mb-xs { margin-bottom: $spacing-xs; }
+.mb-sm { margin-bottom: $spacing-sm; }
+.mb-md { margin-bottom: $spacing-md; }
+.mb-lg { margin-bottom: $spacing-lg; }
+.mb-xl { margin-bottom: $spacing-xl; }
+
+.mt-xs { margin-top: $spacing-xs; }
+.mt-sm { margin-top: $spacing-sm; }
+.mt-md { margin-top: $spacing-md; }
+.mt-lg { margin-top: $spacing-lg; }
+.mt-xl { margin-top: $spacing-xl; }
+
+// 动画
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+} 
